@@ -47,8 +47,8 @@ const Banner = () => {
 
 
 
-      <div className='flex gap-6 w-4/5 border-2 py-5  shadow-lg container mx-auto   justify-center'>
-  <div className="flex gap-5">
+      <div className='lg:flex flex-row   lg:gap-6 w-4/5 border-2 lg:py-5  shadow-lg container mx-auto   justify-center'>
+  <div className="flex gap-5  py-2">
     <div>
       <Image
         src={banner3}
@@ -61,7 +61,7 @@ const Banner = () => {
       <p>Every week new sales</p>
     </div>
   </div>
-  <div className="flex gap-4">
+  <div className="flex gap-4 py-2">
     <div>
       <Image
         src={banner4}
@@ -74,7 +74,7 @@ const Banner = () => {
       <p>100% Free for all orders</p>
     </div>
   </div>
-  <div className="flex gap-5">
+  <div className="flex gap-5 py-2">
     <div>
       <Image
         src={banner5}
@@ -82,12 +82,12 @@ const Banner = () => {
        
       />
     </div>
-    <div className='text-sm'>
+    <div className='text-sm py-2'>
       <p>Great Support 24/7</p>
       <p>We care about your experiences</p>
     </div>
   </div>
-  <div className="flex gap-5">
+  <div className="flex gap-5 ">
     <div>
       <Image
         src={banner6}

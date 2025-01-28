@@ -127,12 +127,12 @@ const Products = () => {
 
 
 
-<div className='  container mx-auto px-28na'>
+<div className='  container mx-auto lg:px-28 md:px-10'>
   <p className='text-3xl py-2'>Customer experience is <br/>important to us</p>
   <p className='text-red-600'>Sed dictum ipsum elementum diam dapibus, ut sodales orci monte <br/>consectetur. Fusce a mollis lorem. Orci varius natoque penatibus.</p>
 </div>
 
- <div className='flex gap-32 w-4/5   py-10   container mx-auto   justify-center'>
+ <div className='flex lg:gap-32 gap-5 w-4/5   lg:py-10 py-5  container mx-auto   justify-center'>
   <div className="">
     <div>
       <Image
