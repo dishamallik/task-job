@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { FaShoppingCart, FaUser, FaChevronDown } from "react-icons/fa";
 import logo from "../../Images/Group (3).png"
+import Link from "next/link";
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -11,9 +12,11 @@ const Navbar = () => {
     <nav className="bg-white  sticky top-0 z-50 border-y-2 border-gray-300">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Left: Logo */}
+        <Link href="/" passHref>
         <div className="">
           <Image src={logo}  alt="Logo" className="w-40" />
         </div>
+        </Link>
 
         {/* Middle: Search bar and Routes */}
         <div className="hidden lg:flex md:flex items-center space-x-8 w-1/2">

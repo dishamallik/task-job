@@ -25,16 +25,17 @@ const Banner = () => {
             Enable diners to customize their<br></br> booking by requesting a specific table <br/>location or view.
             </p>
             <div className="relative w-full">
-  <div className="flex w-full">
+  <div className="flex w-full ">
     <button className="px-7 py-1 bg-[#00B047] text-white rounded-l-xl hover:bg-[#00B047] focus:outline-none focus:ring-2 focus:ring-blue-400 border-gray-600 border-y-2">
       Location
     </button>
     <input
       type="text"
       placeholder=""
-      className="w-full px-2 py-2 rounded-r-xl border-t border-r border-b border-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 pl-14" // added padding for the button
+      className="w-full px-2 py-2 rounded-r-xl border-t border-r border-b border-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 pl-14" 
     />
-    <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-[#00B047] rounded-full" /> {/* Search icon inside the input on the right */}
+
+    <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2  bg-[#00B047] rounded-full" /> 
   </div>
 </div>
 
