@@ -9,8 +9,7 @@ import logo4 from "../Images/Frame 1597881883 (1).png";
 import logo5 from "../Images/Book.png";
 import logo6 from "../Images/Frame 1597881883 (3).png";
 import logo7 from "../Images/Frame 1597881882 (2).png";
-import logo8 from "../Images/Items.png";
-import Link from 'next/link';
+
 
 const cards = [
   { name: 'Milk', image: logo1 },
@@ -30,7 +29,7 @@ const All = () => {
      const [items, setItems] = useState([]);
     
       useEffect(() => {
-        fetch('/item.json')
+        fetch('/api/items')
           .then((response) => response.json())
           .then((data) => setItems(data))
           .catch((error) => console.error('Error fetching data:', error));

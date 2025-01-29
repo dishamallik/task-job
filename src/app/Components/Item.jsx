@@ -28,7 +28,7 @@ const Item = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('/item.json')
+    fetch('/api/items')
       .then((response) => response.json())
       .then((data) => setItems(data))
       .catch((error) => console.error('Error fetching data:', error));

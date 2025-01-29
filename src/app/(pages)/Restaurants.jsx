@@ -10,7 +10,7 @@ const Restaurants = () => {
     const [restaurants, setRestaurants] = useState([]);
 
     useEffect(() => {
-        fetch('/restaurant.json')
+        fetch('/api/restaurants')
             .then((response) => response.json())
             .then((data) => setRestaurants(data))
             .catch((error) => console.error('Error fetching data:', error));

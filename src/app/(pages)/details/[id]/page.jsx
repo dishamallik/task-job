@@ -14,7 +14,8 @@ export default function Details() {
 
   useEffect(() => {
     if (id) {
-      fetch("/restaurant.json")
+      fetch("/api/restaurants")
+
         .then((response) => response.json())
         .then((data) => {
           const item = data.find((item) => item.id === parseInt(id));
