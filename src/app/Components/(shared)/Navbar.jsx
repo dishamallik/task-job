@@ -5,17 +5,18 @@ import React, { useState } from "react";
 import { FaShoppingCart, FaUser, FaChevronDown } from "react-icons/fa";
 import logo from "../../Images/Group (3).png"
 import Link from "next/link";
+
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-white  sticky top-0 z-50 border-y-2 border-gray-300">
+    <nav className="bg-white sticky top-0 z-50 border-y-2 border-gray-300">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Left: Logo */}
         <Link href="/" passHref>
-        <div className="">
-          <Image src={logo}  alt="Logo" className="w-40" />
-        </div>
+          <div className="">
+            <Image src={logo} alt="Logo" className="w-40" />
+          </div>
         </Link>
 
         {/* Middle: Search bar and Routes */}
@@ -35,43 +36,50 @@ const Navbar = () => {
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="text-gray-700 hover:text-[#FF7D29] flex items-center"
             >
-              AllCategories <FaChevronDown className="ml-1" />
+              All Categories <FaChevronDown className="ml-1" />
             </button>
             {isDropdownOpen && (
               <div className="absolute mt-2 bg-white shadow-md rounded-lg py-2 w-48">
-                <a
+                <Link
                   href="/category1"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  onClick={() => setIsDropdownOpen(false)}
                 >
                   Category 1
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/category2"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  onClick={() => setIsDropdownOpen(false)}
                 >
                   Category 2
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/category3"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  onClick={() => setIsDropdownOpen(false)}
                 >
                   Category 3
-                </a>
+                </Link>
               </div>
             )}
           </div>
-          <a href="/coupon" className="text-gray-700 hover:text-[#FF7D29]">
+          <Link href="/coupon" className="text-gray-700 hover:text-[#FF7D29]">
             Coupon
-          </a>
-          <a href="/support" className="text-gray-700 hover:text-[#FF7D29]">
+          </Link>
+          <Link href="/support" className="text-gray-700 hover:text-[#FF7D29]">
             Support
-          </a>
+          </Link>
         </div>
 
         {/* Right: Cart and User Icons */}
         <div className="flex items-center space-x-4">
-          <FaShoppingCart className="text-gray-700 text-xl hover:text-[#FF7D29] cursor-pointer" />
-          <FaUser className="text-gray-700 text-xl hover:text-[#FF7D29] cursor-pointer" />
+          <Link href="/cart">
+            <FaShoppingCart className="text-gray-700 text-xl hover:text-[#FF7D29] cursor-pointer" />
+          </Link>
+          <Link href="/user">
+            <FaUser className="text-gray-700 text-xl hover:text-[#FF7D29] cursor-pointer" />
+          </Link>
         </div>
       </div>
 
@@ -93,37 +101,40 @@ const Navbar = () => {
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="text-gray-700 hover:text-[#FF7D29] flex items-center"
             >
-              All Categories <FaChevronDown className="ml-1" />
+              AllCategories<FaChevronDown className="ml-1" />
             </button>
             {isDropdownOpen && (
               <div className="mt-2 bg-white shadow-md rounded-lg py-2 w-full">
-                <a
+                <Link
                   href="/category1"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  onClick={() => setIsDropdownOpen(false)}
                 >
                   Category 1
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/category2"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  onClick={() => setIsDropdownOpen(false)}
                 >
                   Category 2
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/category3"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  onClick={() => setIsDropdownOpen(false)}
                 >
                   Category 3
-                </a>
+                </Link>
               </div>
             )}
           </div>
-          <a href="/coupon" className="text-gray-700 hover:text-[#FF7D29]">
+          <Link href="/coupon" className="text-gray-700 hover:text-[#FF7D29]">
             Coupon
-          </a>
-          <a href="/support" className="text-gray-700 hover:text-[#FF7D29]">
+          </Link>
+          <Link href="/support" className="text-gray-700 hover:text-[#FF7D29]">
             Support
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
