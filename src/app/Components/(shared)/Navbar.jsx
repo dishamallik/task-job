@@ -9,6 +9,9 @@ import Link from "next/link";
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  const [isOpen, setIsOpen] = useState(false);
+  
+
   return (
     <nav className="bg-white sticky top-0 z-50 border-y-2 border-gray-300">
       <div className="container mx-auto flex justify-between items-center p-4">
@@ -20,7 +23,7 @@ const Navbar = () => {
         </Link>
 
         {/* Middle: Search bar and Routes */}
-        <div className="hidden lg:flex md:flex items-center space-x-8 w-1/2">
+        <div className=" flex md:hidden sm:hidden items-center space-x-8 w-1/2">
           <div className="flex w-full items-center">
             <input
               type="text"
@@ -77,14 +80,31 @@ const Navbar = () => {
           <Link href="/cart">
             <FaShoppingCart className="text-gray-700 text-xl hover:text-[#FF7D29] cursor-pointer" />
           </Link>
-          <Link href="/user">
-            <FaUser className="text-gray-700 text-xl hover:text-[#FF7D29] cursor-pointer" />
+          <div className="relative">
+      <div
+        className="cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <FaUser className="text-gray-700 text-xl hover:text-[#FF7D29]" />
+      </div>
+
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-32 rounded-2xl">
+          <Link
+            href="/login"
+            className="block px-4 py-2 text-gray-700 border border-orange-500  hover:bg-gray-100 bg-gray-300 rounded-2xl"
+            onClick={() => setIsOpen(false)}
+          >
+            Login
           </Link>
+        </div>
+      )}
+    </div>
         </div>
       </div>
 
       {/* Responsive: Search bar and Routes */}
-      <div className="md:hidden lg:hidden bg-gray-100 p-2 flex flex-col space-y-2">
+      <div className=" hidden bg-gray-100 p-2 md:flex sm:flex flex-col space-y-2">
         <div className="flex items-center">
           <input
             type="text"

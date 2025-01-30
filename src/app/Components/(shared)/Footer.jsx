@@ -4,6 +4,7 @@ import logo1 from "../../Images/AppStore.png"
 import logo2 from "../../Images/Qrcode 1.png"
 import logo3 from "../../Images/png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.png"
 import Image from 'next/image';
+import Link from 'next/link';
 const Footer = () => {
     return (
         <footer className="footer bg-black text-white p-10">
@@ -34,8 +35,15 @@ const Footer = () => {
   </nav>
   <nav>
     <h6 className="footer-title">Quick Link</h6>
-    <a className="link link-hover">Privacy Policy</a>
-    <a className="link link-hover">Terms of Use</a>
+     <Link
+                  href="/privacy " className="link link-hover">
+    Privacy Policy
+    </Link>
+     <Link
+                  href="/terms " className="link link-hover">
+    Terms of Use
+    </Link>
+    
     <a className="link link-hover">FAQ</a>
     <a className="link link-hover">Contact</a>
   </nav>
