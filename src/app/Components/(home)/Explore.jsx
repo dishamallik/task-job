@@ -64,7 +64,9 @@ const Explore = () => {
     : restaurant.description}
 </p>
 
-   <button className="btn lg:px-40 px-28 m-1 bg-[#00B047] text-lg">Visit</button>
+<Link href={`/details/${restaurant.id}`}>
+                          <button className="btn lg:px-40 px-28 m-1 bg-[#00B047] text-lg">Visit</button>
+                          </Link>
   </div>
 </div>
                     </div>

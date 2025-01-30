@@ -24,15 +24,15 @@ const Restaurants = () => {
     <h1 className="mb-3">Check your city Nearby<br />Restaurant</h1>
   </div>
 
-  <div className="relative py-5">
-    <div className="flex">
+  <div className="relative py-5 ">
+    <div className="flex ">
       <button className="px-5 py-2 bg-[#00B047] text-white rounded-l-xl hover:bg-[#00B047] focus:outline-none focus:ring-2 focus:ring-blue-400 border-gray-500 border-y-2">
         Location
       </button>
       <input
         type="text"
         placeholder="Search by location"
-        className="px-2 py-2 w-64 border-t border-r border-b border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100"
+        className="px-2 py-2 lg:w-64 border-t border-r border-b border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100"
       />
       <button className="px-2 py-2 bg-[#00B047] text-white rounded-r-full hover:bg-[#008F3E] focus:outline-none focus:ring-2 focus:ring-blue-400">
         <FaSearch />
