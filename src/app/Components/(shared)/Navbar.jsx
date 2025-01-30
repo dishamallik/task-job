@@ -35,12 +35,13 @@ const Navbar = () => {
             </button>
           </div>
           <div className="relative">
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="text-gray-700 hover:text-[#FF7D29] flex items-center"
-            >
-              All Categories <FaChevronDown className="ml-1" />
-            </button>
+          <button
+  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+  className="text-gray-700 hover:text-[#FF7D29] flex items-center whitespace-nowrap"
+>
+  All Categories <FaChevronDown className="ml-1" />
+</button>
+
             {isDropdownOpen && (
               <div className="absolute mt-2 bg-white shadow-md rounded-lg py-2 w-48">
                 <Link
@@ -89,13 +90,21 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-32 rounded-2xl">
+        <div className="absolute right-0 mt-2 w-32 
+border-orange-800 ">
           <Link
             href="/login"
-            className="block px-4 py-2 text-gray-700 border border-orange-500  hover:bg-gray-100 bg-gray-300 rounded-2xl"
+            className="block px-4 py-2 text-black border  hover:bg-orange-100 bg-orange-300 "
             onClick={() => setIsOpen(false)}
           >
             Login
+          </Link>
+          <Link
+            href="/profile"
+            className="block px-4 py-2 text-black border  hover:bg-orange-100 bg-orange-300 "
+            onClick={() => setIsOpen(false)}
+          >
+            Profile
           </Link>
         </div>
       )}

@@ -38,7 +38,7 @@ const Item = () => {
 
   return (
     <>
-      {/* Header Section */}
+      
       <div className='flex justify-between container mx-auto py-4'>
         <Image src={logo8} alt="logo" width={150} height={100} />
         <Link href="/all" passHref>
@@ -46,7 +46,7 @@ const Item = () => {
         </Link>
       </div>
 
-      {/* Cards Section */}
+      
       <div className="flex justify-center mx-32 my-10">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-2">
@@ -60,7 +60,7 @@ const Item = () => {
         </div>
       </div>
 
-      {/* Items Section */}
+      
       < div className='container mx-auto my-10'>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
   {firstSixItems.length > 0 ? (

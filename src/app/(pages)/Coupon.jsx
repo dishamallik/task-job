@@ -10,7 +10,7 @@ export default function Coupon() {
     <div className="relative">
       <Image src={logo} alt="logo" className="w-[850px] " />
       
-      {/* Text Container with Flex */}
+      
       <div className="absolute top-1/2 left-2/4 transform -translate-x-1/2 -translate-y-1/2 
                       flex flex-row items-center justify-between gap-6">
            <div>             
@@ -46,7 +46,7 @@ export default function Coupon() {
     <div className="relative">
       <Image src={logo} alt="logo" className="w-[850px]" />
       
-      {/* Text Container with Flex */}
+      
       <div className="absolute top-1/2 left-2/4 transform -translate-x-1/2 -translate-y-1/2 
                       flex flex-row items-center justify-between gap-6">
            <div>             
